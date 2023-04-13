@@ -9,8 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
       const converedValue = currentValue
           .replace("×", "*")
           .replace("÷", "/")
-          .replace("%", "*0.01");
-  
+          .replace("%", "*0.01")
+          .replace("sin", "Math.sin")
+          .replace("cos", "Math.cos")
+          .replace("π","22/7")
+          .replace("ln", "Math.log");
+        
       const result = eval(converedValue);
       currentValue = result.toString();
       display.value = currentValue;
@@ -20,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
       const button = buttons[i]; 
       button.addEventListener('click', function(){
           const value = button.innerText;
-  
           if (value == "AC") {
               currentValue="";
               display.value = currentValue; 
@@ -29,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
               
           } else {
               currentValue += value;
-              console.log('current value:', currentValue);
               display.value = currentValue;            
           }
   
