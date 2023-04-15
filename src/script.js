@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
           .replace("%", "*0.01")
           .replace("sin", "Math.sin")
           .replace("cos", "Math.cos")
-          .replace("π","22/7")
+          .replace("π","Math.PI")
           .replace("ln", "Math.log");
         
       const result = eval(converedValue);
