@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error(error);
             currentValue = "Error";
             display.value = currentValue;
+            currentValue = ""
         }
 
   
